@@ -1,0 +1,308 @@
+/* Profile section */
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Square profile image */
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px; /* Slight rounding to the corners */
+  margin-right: 10px;
+}
+
+/* Bracket design */
+.profile-bracket {
+  font-size: 30px;
+  color: #fff; /* White color for the bracket */
+  margin-right: 10px;
+}
+
+/* Profile text */
+.profile-text h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.profile-text p {
+  margin: 0;
+  color: #bbb; /* Light grey for the details */
+  font-size: 15px;
+}
+
+/* Connect button styling */
+/* .connect-btn {
+  background-color: #555;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 80px;
+  
+}
+
+.connect-btn:hover {
+  background-color: #777;
+} */
+
+/* Tech icons container */
+.tech-icons {
+  display: flex;
+  flex-wrap: none; /* Allow the tech icons to wrap into two rows */
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.tech-icons img {
+  margin: 5px;
+  height: 25px; /* Set uniform height for icons */
+  object-fit: contain; /* Icons fit within the container */
+  
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(33, 32, 32, 1);
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  color: white;
+}
+
+.profile-details h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.profile-details p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* Connect Button */
+.connect-btn {
+  background-color: #00fa7d;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+  transform: translateX(0); /* Default position */
+}
+
+/* When the button is clicked */
+.connect-btn.slide-right {
+  transform: translateX(150px); /* Slide distance */
+  transition: transform 0.5s ease;
+}
+
+.connect-btn-transition {
+  transition: transform 0.5s ease;
+}
+
+/* Icon Strip */
+.icon-strip {
+  display: flex;
+  gap: 10px;
+}
+
+/* Tech Icons */
+
+/* Social Media Icons (for when Connect is clicked) */
+.social-icons img {
+  height: 30px;
+  width: 30px;
+  margin: 8px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  align-items: center;
+  
+}
+
+/* Zoom effect on hover */
+.social-icons img:hover {
+  transform: scale(1.35);
+}
+
+.tech-stach-icons img:hover {
+  transform: scale(1.6);
+}
+
+/* Right-side Widgets (Clock, Weather, Resume Button) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjust spacing between elements */
+}
+
+/*.clock, .weather-widget {
+  color: white;
+  font-size: 1rem;
+} */
+
+/* Clock, Date, Weather containers */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  
+  
+}
+
+.info-icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+  color: #00fa7d;
+  height: 25px;
+  
+}
+
+.clock-container, .date-container, .weather-container {
+  
+  
+  background-color: rgba(229, 229, 229, 1);
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.clock-text, .date-text, .weather-container p {
+  font-size: 1rem;
+  margin: 0;
+  /* font-family: 'Roboto', sans-serif; */
+  font-weight: 600;
+  
+}
+
+.resume-btn {
+  background-color: #0003c7;
+  border-radius: 2px;
+  padding: 5px 15px;
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Media queries for mobile responsiveness */
+
+
+/* Tablet view for screens with a max width of 1024px */
+@media (max-width: 1024px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-right {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  .social-icons img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+
+/* Mobile view for screens with a max width of 768px */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center; /* Center align items */
+    width: 100%; /* Ensure full-width for mobile */
+    padding: 15px; /* Add some padding for spacing */
+    
+  }
+
+  .profile-container {
+    flex-direction: column; /* Stack the profile image and info vertically */
+    align-items: center; /* Center them horizontally */
+    width: 100%; /* Make it full-width */
+  }
+
+  .profile-text {
+    text-align: center; /* Center align the text for mobile */
+    width: 100%;
+  }
+
+  .connect-btn {
+    width: 90%; /* Make the connect button full width */
+    margin: 15px 0; /* Add margin above and below for spacing */
+  }
+
+  .connect-btn.slide-right {
+    transform: translateX(0); /* Adjust the value based on how far you want it to slide */
+
+  }
+
+  .navbar-right {
+    flex-direction: column; /* Stack widgets vertically */
+    align-items: center; /* Center the widgets */
+    width: 100%; /* Make them take the full width */
+    margin-top: 20px; /* Add space above */
+  }
+
+  .info-item {
+    width: 100%; /* Ensure full width for widgets */
+    margin-bottom: 15px; /* Add space between widgets */
+    margin-right: -45px; /* Center the clock, date, and weather info */
+  }
+
+  .social-icons {
+    flex-direction: row; /* Keep social icons in a row */
+    justify-content: center; /* Center align them */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    margin-top: 20px; /* Add space at the top */
+  }
+
+  .social-icons img {
+    height: 40px; /* Adjust icon size for mobile */
+    width: 40px;
+    margin: 5px; /* Add space between icons */
+  }
+
+  
+  .profile-image {
+    width: 200px;
+    height:200px;
+    border-radius: 16px; /* Slight rounding to the corners */
+    margin-bottom: 15px;
+    
+  }
+
+}
+
+

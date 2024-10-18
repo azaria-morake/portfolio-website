@@ -1,0 +1,29 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;  /* Hide the overflow to create a sliding effect */
+  display: flex;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.15s ease-in-out;
+  opacity: 0;  /* Make the inactive slides invisible */
+}
+
+.carousel-item.active {
+  opacity: 1;  /* Only the active slide is visible */
+  transform: translateX(0);  /* No translation for the active slide */
+}
+
+.carousel-item:not(.active) {
+  transform: translateX(100%);  /* Push the inactive slides off the screen */
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}

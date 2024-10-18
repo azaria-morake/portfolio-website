@@ -1,0 +1,130 @@
+/* Skills.css */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+/* Title */
+.skills-title {
+  font-size: 2rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: rgba(33, 32, 32, 1);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 1200px; /* Same as carousel */
+  overflow: hidden;
+  padding: 0px;
+  gap: 10px;
+  position: relative;
+  background-color: #eaeaea;
+}
+
+/* Skill Card */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(33, 32, 32, 1);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out, height 0.4s ease-in-out, margin-bottom 0.4s ease-in-out;
+  height: auto; /* Default height for non-expanded cards */
+  position: relative;
+  z-index: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Expanded Card */
+.skill-card.expanded {
+  height: auto; /* Expand the card to 800px height */
+  margin-bottom: 30px; /* Space between expanded card and next */
+  transition: height 0.4s ease-in-out, margin-bottom 0.4s ease-in-out;
+}
+
+/* Skill Header with Icon and Title */
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  width: 100%;
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Skill Name */
+.skill-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(229, 229, 229, 1);
+}
+
+/* Tech Icons */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(33, 32, 32, 1);
+  padding: 0px;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+
+  
+}
+
+/* Skill Description */
+.skill-description {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 1rem;
+  color: rgba(229, 229, 229, 1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* Expanded skill description */
+.skill-card.expanded .skill-description {
+  max-height: 150px; /* Adjust as per description content */
+}
+
+@media (max-width: 768px) {
+
+  .tech-icons {
+    gap: 5px; /* Reduce the gap between icons for smaller screens */
+    align-items: start;
+  }
+
+  .tech-icon {
+    margin-bottom: 20px;
+    width: 60px; /* Reduce icon size for better fit on smaller screens */
+    height: 60px;
+  }
+  
+}

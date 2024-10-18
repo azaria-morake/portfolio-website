@@ -1,0 +1,150 @@
+/*.articles-section {
+  margin-top: 40px;
+}
+
+.articles-container {
+  display: flex;
+  gap: 20px;
+}
+
+.article-card {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.article-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-info {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin-top: -20px;
+  display: none;
+}
+
+.article-card.active .article-info {
+  display: block;
+}
+
+.article-card.active {
+  transform: scale(1.05);
+}
+
+.open-article-btn {
+  background-color: #17a2b8;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.article-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.article-modal h3 {
+  margin-top: 0;
+}
+
+.article-modal button {
+  margin-top: 20px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+*/
+
+/* Articles.css */
+
+.articles-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.article-card {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  z-index: 1; /* Ensure image stays on top */
+}
+
+.article-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -100%; /* Initially hidden to the right */
+  width: 150px;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  transition: right 0.3s ease-in-out; /* Sliding effect */
+  z-index: 0; /* Behind the image */
+}
+
+.article-card:hover .article-info {
+  right: 0; /* Slide the background to the right on hover */
+}
+
+.open-article-btn {
+  background-color: #17a2b8;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.article-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.article-modal h3 {
+  margin-top: 0;
+}
+
+.article-modal button {
+  margin-top: 20px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+

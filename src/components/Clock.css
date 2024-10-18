@@ -1,0 +1,12 @@
+clock-container {
+         /* White background */
+    color: rgba(0, 0, 0, 0.2);              /* Dark grey text */
+    padding: 10px 20px;           /* Padding inside the container */
+    border-radius: 8px;           /* Rounded corners */
+    font-size: 1.2rem;            /* Font size for the digital clock */
+    font-family: 'Roboto', sans-serif; /* Digital clock font style */
+     /* Subtle shadow for button effect */
+    display: inline-block;        /* Ensure it's inline for navbar */
+    height: 45px;  
+} 
+  

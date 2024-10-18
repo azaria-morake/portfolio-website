@@ -1,0 +1,73 @@
+import React, { useState } from 'react';
+import './Navbar.css'; // We'll add the CSS shortly
+import { Modal, Button } from 'react-bootstrap'; // For the modal behavior
+
+const Navbar = () => {
+  const [showSocialIcons, setShowSocialIcons] = useState(false);
+
+  const handleConnectClick = () => {
+    setShowSocialIcons(!showSocialIcons);
+  };
+
+  return (
+    <div className="navbar-container">
+      {/* Profile Image and Info */}
+      <div className="profile-container">
+        <img src="azaria-morake-5.jpg" alt="Profile" className="profile-image" />
+          {/* Bracket and Text */}
+         <div className="profile-info">
+           <span className="profile-bracket">[</span>
+           <div className="profile-text">
+             <h3>Your Name</h3>
+             <p>Full Stack Developer</p>
+             <p>Location</p>
+           </div>
+         </div>
+      </div>
+
+      {/* Connect Button */}
+       <Button variant="info" className="connect-btn" onClick={handleConnectClick}>
+        {showSocialIcons ? 'Return' : 'Connect'}
+      </Button>
+      {/* Social Media Icons */}
+      {showSocialIcons && (
+        <div className="social-icons">
+          <img src="instagram-icon.png" alt="Instagram" className="social-icon" />
+          <img src="twitter-icon.png" alt="Twitter" className="social-icon" />
+          <img src="youtube-icon.png" alt="YouTube" className="social-icon" />
+          {/* Add other social media icons here */}
+        </div> )}
+
+          <div className="tech-icons">
+     <img src="c-plain.png" alt="C" />
+     <img src="python-plain.png" alt="Python" />
+     <img src="Property 1=ruby-plain.png" alt="Ruby" />
+     <img src="javascript-plain.png" alt="JavaScript" />
+     <img src="typescript-plain.png" alt="TypeScript" />
+     <img src="nodejs-plain.png" alt="NodeJS" />
+     <img src="react-original.png" alt="React" />
+     <img src="flask-original.png" alt="Flask" />
+     <img src="django-plain.png" alt="Django" />
+     <img src="mysql-plain.png" alt="MySQL" />
+     <img src="postgresql-plain.png" alt="PostgreSQL" />
+     <img src="mongodb-plain-wordmark.png" alt="MongoDB" />
+     <img src="sqlite-plain.png" alt="SQLite" />
+     <img src="html5-plain-wordmark.png" alt="HTML5" />
+     <img src="css3-plain.png" alt="CSS3" />
+     <img src="bootstrap-plain.png" alt="Bootstrap" />
+     <img src="eslint-original.png" alt="ESLint" />
+     <img src="github-original.png" alt="GitHub" />
+     <img src="git-plain.png" alt="Git" />
+     <img src="heroku-plain.png" alt="Heroku" />
+     <img src="figma-plain.png" alt="Figma" />
+     <img src="ubuntu-plain.png" alt="Ubuntu" />
+     <img src="docker-plain.png" alt="Docker" />
+     <img src="visualstudio-plain.png" alt="VS Code" />
+          </div>
+      
+    </div>
+  );
+};
+
+export default Navbar;
+

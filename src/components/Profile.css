@@ -1,0 +1,21 @@
+/* Profile.css */
+
+.profile-description {
+  background-color: rgba(33, 32, 32, 1); /* light grey background */
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(229, 229, 229, 1);
+  margin-bottom: 20px;
+}
+
+.quote-left {
+  font-size: 4rem;
+  color: #999;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
+
