@@ -1,3 +1,12 @@
+.mobile-text {
+
+  color:#ffffff;
+  text-align: justify; 
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
 /* Profile section */
 .profile-container {
   display: flex;
@@ -24,6 +33,8 @@
   margin: 0;
   color: #fff;
   font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .profile-text p {
@@ -71,6 +82,9 @@
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
+  margin: 10px auto;
+  max-width: 1200px;
+  border-radius: 10px;
 }
 
 /* Profile Info */
@@ -230,10 +244,7 @@
     gap: 20px;
   }
 
-  .social-icons img {
-    height: 35px;
-    width: 35px;
-  }
+  
 }
 
 
@@ -244,9 +255,32 @@
     align-items: center; /* Center align items */
     width: 100%; /* Ensure full-width for mobile */
     padding: 15px; /* Add some padding for spacing */
-    
+    background-color: rgba(33, 32, 32, 1); /* Ensure background color is applied */
+    box-sizing: border-box; /* Make sure padding is included */
+    flex-grow: 1; /* Allow container to expand with its content */
   }
 
+  .social-icons {
+    flex-direction: column; /* Keep social icons in a row */
+    justify-content: center; /* Center align them */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    margin-top: 20px; /* Add space at the top */
+    width: 100%; /* Take up full width */
+    display: flex;
+    justify-content: center; /* Center the icons */
+    align-items: center; /* Vertically center the icons */
+
+  }
+
+  .social-icons img {
+    height: 30px; /* Set a fixed size for icons */
+    width: 30px;
+    margin: 15px; /* Add spacing between icons */
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+
+  
   .profile-container {
     flex-direction: column; /* Stack the profile image and info vertically */
     align-items: center; /* Center them horizontally */
@@ -281,18 +315,11 @@
     margin-right: -45px; /* Center the clock, date, and weather info */
   }
 
-  .social-icons {
-    flex-direction: row; /* Keep social icons in a row */
-    justify-content: center; /* Center align them */
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    margin-top: 20px; /* Add space at the top */
-  }
-
+ 
   .social-icons img {
-    height: 40px; /* Adjust icon size for mobile */
-    width: 40px;
-    margin: 5px; /* Add space between icons */
+    
   }
+ 
 
   
   .profile-image {

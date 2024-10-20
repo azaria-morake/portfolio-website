@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="profile-container">
           <img src="mr-morake.jpg" alt="Profile" className="profile-image" />
           <div className="profile-info">
-            <span className="profile-bracket">[</span>
+          {isMobile ? null : <span className="profile-bracket">[</span>}
             <div className="profile-text">
               <h3>Azaria Morake</h3>
               <p>Software Engineer</p>
@@ -45,12 +45,21 @@ const Navbar = () => {
       )}
 
       {/* Connect Button */}
-      <Button variant="info" className={buttonClass} onClick={handleConnectClick}>
+      <Button variant="info" className={buttonClass} style={{ fontWeight: 'bold' }} onClick={handleConnectClick}>
         {showSocialIcons ? 'Return' : 'Connect'}
       </Button>
 
       {/* Right-side Widgets (Clock, Date, Weather, Resume Button) */}
-      {isMobile ? null : ( <div className="navbar-right">
+      {isMobile ? ( 
+        !showSocialIcons && (
+        <div className='mobile-text'>
+                   <p> Hello, welcome to my website. 😊🌟 </p>
+                   <p>Here you will get to know everything about me and my profession. It also gives a glimpse into my programming ideologies. </p>
+                   <p> You can use the arrows to navigate through each section. I designed  it in this way so that the content
+                       is manageable, hoping to enhance your experience.</p>
+                   <p>Thanks for popping in. Much Love. ❤️💖</p>
+                        
+      </div>)) : ( <div className="navbar-right">
         {!showSocialIcons && (
           <>
             <div className="info-item">
@@ -58,7 +67,7 @@ const Navbar = () => {
               <Clock />
             </div>
             <div className="info-item">
-              <img src='date.png' className="info-icon" />
+              <img src='Date.png' className="info-icon" />
               <DateDisplay />
             </div>
             <div className="info-item">

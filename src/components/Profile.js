@@ -7,7 +7,7 @@ const Profile = () => {
   return (
   <> 
   
-  <h2 className="about-me-title">About Me</h2>
+  <h2 className="skills-title">About Me</h2>
   <div className="profile-description">
       
       <div className="quote-left">“</div>
