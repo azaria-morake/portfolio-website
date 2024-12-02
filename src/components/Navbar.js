@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="navbar-container">
       {!showSocialIcons && (
         <div className="profile-container">
-          <img src="mr-morake.jpg" alt="Profile" className="profile-image" />
+          <img src="mr-morake.png" alt="Profile" className="profile-image" />
           <div className="profile-info">
           {isMobile ? null : <span className="profile-bracket">[</span>}
             <div className="profile-text">
@@ -86,7 +86,7 @@ const Navbar = () => {
           <a href="https://github.com/azaria-morake" target="_blank" rel="noopener noreferrer">
           <img src="github.png" alt="GitHub" className="social-icon"/>
         </a>
-        <a href="https://linkedin.com/azariamorake" target="_blank" rel="noopener noreferrer"> 
+        <a href="https://www.linkedin.com/in/azaria-morake-04216b242/" target="_blank" rel="noopener noreferrer"> 
           <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
         </a>
         <a href="https://wa.me/+27660857813" target="_blank" rel="noopener noreferrer">

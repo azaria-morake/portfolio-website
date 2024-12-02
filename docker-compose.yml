@@ -1,0 +1,45 @@
+services:
+  backend:
+    build:
+    context: ~/vfind/projects/React/projects/websites/azaria-morake/request_service_project
+
+    container_name: django_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./request_service_project:/app
+      - db_data:/var/lib/mysql
+    environment:
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DJANGO_DEBUG=${DJANGO_DEBUG}
+      - DJANGO_ALLOWED_HOSTS=${DJANGO_ALLOWED_HOSTS}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+  frontend:
+    build:
+      context: .
+    container_name: react_app
+    ports:
+      - "3000:80"
+    volumes:
+      - ./src:/app
+
+volumes:
+  db_data:

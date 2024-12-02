@@ -12,14 +12,13 @@ const Profile = () => {
       
       <div className="quote-left">“</div>
       <p>
-        My journey in Computer Science began with a challenging stint at the University of Cape Town — I did not graduate. However, by God’s grace, I got a Software Engineering scholarship from ALX.
+      As a software developer, I’m driven by a commitment to understanding the 'why' and 'how' behind technologies. I believe in balancing abstract, high-level design with a strong grasp of underlying mechanics, enabling me to create solutions that are both innovative and reliable. I owe all of that to my foundations in low-level programming which has led me to rapid application of high-level.
       </p>
       <p>
-        My core interest revolves around researching both established and emerging technologies through extensive research papers. I am driven to tackle significant challenges by delivering optimal solutions founded on robust principles.
+      My work centers on building purposeful and intuitive applications, focusing on enhancing user experience and ensuring scalability. I value adaptability, which has led me to embrace diverse technologies like React, OpenStack, MongoDB, and Django, and to pursue continuous learning in areas like AI and financial tech. I can build the backends, frontends and deploy, create redundant and proxy servers, all by myself. No secret, I just absolutely enjoy what I do, I embrace challenges.
       </p>
       <p>
-        When I’m not immersed in tech, I indulge in video games, soccer practice, skateboarding, occasional modeling, and making music. But my real passion is networking—I’m almost always at events, expanding my professional circle. 60% of the time, it works every time.
-      </p>
+      With every project, whether developing platforms to bridge gaps in financial inclusion, or building community-driven tech solutions, I’m motivated by a vision of leveraging software to solve real-world challenges effectively. My approach emphasizes clarity in problem-solving, scalability, and a user-focused design that speaks to end-user needs. I look forward to opportunities where I can bring this philosophy to impactful projects.      </p>
     </div>
     
     
